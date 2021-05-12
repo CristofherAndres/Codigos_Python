@@ -11,7 +11,6 @@ if opcion==2:
     pizza = "Mediana"
 if opcion==3:
     pizza = "Familiar"
-
 i=0
 ingredientes = []
 
@@ -43,4 +42,3 @@ while(i!=9):
             print(i)
         break
 print("Gracias por su preferencia")
-    
