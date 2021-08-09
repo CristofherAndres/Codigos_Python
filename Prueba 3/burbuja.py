@@ -1,10 +1,36 @@
+def validar_order(datos):
+    largo = len(datos)
+    contador=0
+    for i in range(largo-1):
+        if datos[i]<=datos[i+1]:
+            contador+=1    
+    if contador==largo-1:
+        return False
+    return True
+            
+###############################
 
 
-datos = [5,3,2,9,1]
+cant = int(input("¿Cuantos datos quiere ingresar?:  "))
 
-if datos[0] > datos[1]:
-    aux=datos[0]
-    datos[0] = datos[1]
-    datos[1]=aux
+datos = []
+for i in range(cant):
+    dato = int(input("Ingrese el dato "+str(i+1)+":  "))
+    datos.append(dato)
+
+print(datos)
+
+largo = len(datos)
+
+valida=True
+
+while valida:
+    for i in range(largo-1):
+        if datos[i] > datos[i+1]:
+            aux=datos[i]
+            datos[i] = datos[i+1]
+            datos[i+1]=aux
+    valida=validar_order(datos)
+
 
 print(datos)
